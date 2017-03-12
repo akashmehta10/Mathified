@@ -1,3 +1,5 @@
-<div class="header">
-<h2><i>"MATHIFIED"</i> - All Your Math at One Place!</h2>
+<div class="header" align="center">
+<div class="logo"><i><b>"MATHIFIED"</b></i></div>
+<div>All Your Math at One Place</div>
+
 </div>

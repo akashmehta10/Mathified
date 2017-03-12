@@ -1,7 +1,54 @@
 .body {
-	background-image: url('../images/math-grid.jpg');
-	height: 910px;
+	background-image: url('../images/math-grid2-blurred.jpg');
+	height: 1150px;
 	width: 960px;
 	margin:0px auto;
 	padding:25px;
+	font-family: 'Ubuntu', serif;
+	font-size: 18px;
+}
+
+a {
+    color: #ff9999;
+    font-weight: bold;
+}
+
+.operationHeader {
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+
+.operation {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.example {
+	margin-top: 30px;
+	margin-left: 50px;
+	margin-bottom: 40px;
+}
+
+.ioexample {
+	font-weight: bold;
+	color: #ff9999;
+}
+
+.ioDiv {
+	margin-top: 10px;
+	margin-left: 80px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
 }
