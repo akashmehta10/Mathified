@@ -14,8 +14,10 @@ a {
 }
 
 .operationHeader {
-	font-size: 25px;
+	font-size: 30px;
 	margin-bottom: 10px;
+	font-weight: bold;
+	color: #ff9999;
 }
 
 .operation {
@@ -45,10 +47,38 @@ table {
 }
 
 td, th {
-    border: 1px solid #dddddd;
+    border: 1px solid #ff9999;
     text-align: center;
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #ff9999;
+}
+.input {
+	color: #ff9999;
+	margin-top: 20px;
+	font-weight: bold;
+}
+.textarea {
+	width: 40%;
+	height: 200px;
+	border: 3px solid #ff9999;
+	padding: 5px;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	word-break: break-word;
+}
+.buttonSubmit {
+	width: 10%;
+	margin-top: 5px;
+	background: #ff9999;
+	padding: 3px;
+	border: 2px solid #ff9999;
+	font-weight: bold;
+	height: 30px;
+}
+
+.result {
+	margin-top: 20px;
+	font-weight: bold;
 }

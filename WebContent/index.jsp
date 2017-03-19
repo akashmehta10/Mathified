@@ -11,9 +11,9 @@
 <body>
 	<jsp:include page="/WEB-INF/jsp/header.jsp" />
 	<div class="body">
-	<div class="operationHeader">What can you do?</div>
+	<div class="operationHeader">What can you do with <i>MATHIFIED?</i></div>
 	<div class="operation">
-	<a href=":blank">Basic Operations</a> - Sum/Average/Multiply/Sort/Count on List of Numbers
+	<a href="basic">1. Basic Operations</a> - Sum/Average/Multiply/Sort/Count on List of Numbers
 	<div class="example">
 	<span class="ioexample">Example:</span>
 	<div class="ioDiv">
@@ -25,7 +25,7 @@
 	</div>
 	<hr>
 	<div class="operation">
-	<a href=":blank">Table Data</a> - Group by on Column(s)
+	<a href=":blank">2. Table Data</a> - Group by on Column(s)
 	<div class="example">
 	<span class="ioexample">Example:</span>
 	<div class="ioDiv">
@@ -73,11 +73,11 @@
 	</div>
 	<hr>
 	<div class="operation">
-	<a href=":blank">Compare 2 Lists</a> - Find Common/Uncommon Elements in 2 Lists
+	<a href=":blank">3. Compare 2 Lists</a> - Find Common/Uncommon Elements in 2 Lists
 	<div class="example">
 	<span class="ioexample">Example:</span>
 	<div class="ioDiv">
-	<span class="ioexample">Input: </span>List1: [3,2,5] List2: [3,1,5]
+	<span class="ioexample">Input: </span>List1: [3,2,5], List2: [3,1,5]
 	<br/><br/>
 	<span class="ioexample">Output: </span>List1 AND List2 = [3,5], Only in List1 = [2], Only in List2 = [1], List1 OR List2 = [3,2,5,1]
 	</div>
@@ -85,7 +85,7 @@
 	</div>
 	<hr>
 	<div class="operation">
-	<a href=":blank">Delimit/Tokenize List</a> - Choose your own Tokenizer
+	<a href=":blank">4. Delimit/Tokenize List</a> - Choose your own Tokenizer
 	<div class="example">
 	<span class="ioexample">Example:</span>
 	<div class="ioDiv">
