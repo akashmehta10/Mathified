@@ -26,8 +26,7 @@ public class Basic {
 	@ResponseBody
 	public String getBasicResults(String numberList) {
 		BasicOperationModel resultObj = new BasicOperationModel();
-		float [] numberArray = resultObj.getNumberArray(numberList);
-		resultObj.setResult(numberArray);
+		resultObj.setResult(numberList);
 		JSONObject jsonObject = new JSONObject(resultObj);
 		String myJson  =jsonObject.toString();
 		return myJson;

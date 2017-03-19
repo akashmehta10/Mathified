@@ -4,9 +4,9 @@ public class BasicOperationModel {
 	private String numberList;
 	private float sum;
 	private float average;
-	private float product;
+	private float sd;
+	private float variance;
 	private int count;
-	private String resultData;
 	private Boolean success;
 	
 	public void setNumberList(String _numberList) {
@@ -32,19 +32,17 @@ public class BasicOperationModel {
 		}
 	}
 	
-	public void setResult(float[] numberArray) {
+	public void setResult(String listOfNumbers) {
+		float [] numberArray = getNumberArray(listOfNumbers);
 		if(numberArray == null) {
 			success = false;
 			return;
 		}
-		float sumNumbers = 0f;
-		for(float number: numberArray) {
-			sumNumbers += number;
-		}
-		sum = sumNumbers;
-		count = numberArray.length;
-		average = sumNumbers/count;
-		resultData = "Count: " + count + ", Sum: " + sum + ", Average: " + average;
+		setSum(numberArray);
+		setCount(numberArray);
+		setAverage(sum, count);
+		setVariance(numberArray, average, count);
+		setSd(variance);
 		success = true;
 	}
 	
@@ -60,12 +58,44 @@ public class BasicOperationModel {
 		return average;
 	}
 	
-	public String getResultData() {
-		return resultData;
+	public float getVariance() {
+		return variance;
+	}
+	
+	public float getSd() {
+		return sd;
 	}
 	
 	public Boolean getSuccess() {
 		return success;
+	}
+	
+	public void setSum(float[] numberArray) {
+		float sumNumbers = 0f;
+		for(float number: numberArray) {
+			sumNumbers += number;
+		}
+		sum = sumNumbers;
+	}
+	
+	public void setCount(float[] numberArray) {
+		count = numberArray.length;
+	}
+	
+	public void setAverage(float _sum, int _count) {
+		average = _sum/_count;
+	}
+	
+	public void setVariance(float[] numberArray, float _average, int _count) {
+		float sumSquareDifference = 0f;
+		for(float number:numberArray) {
+			sumSquareDifference += Math.pow((number - _average) , 2);
+		}
+		variance = sumSquareDifference/_count;
+	}
+	
+	public void setSd(float _variance) {
+		sd = (float) Math.sqrt(_variance);
 	}
  }
 
