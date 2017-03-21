@@ -13,7 +13,7 @@
 	<div class="body">
 	<div class="operationHeader">What can you do with <i>MATHIFIED?</i></div>
 	<div class="operation">
-	<a href="basic">1. Basic Operations</a> - Sum/Average/Multiply/Sort/Count on List of Numbers
+	<a href="basic">1. Get Statistics on List of Numbers</a> - Count/Sum/Average/Variance/Standard Deviation on List of Numbers
 	<div class="example">
 	<span class="ioexample">Example:</span>
 	<div class="ioDiv">
@@ -25,7 +25,7 @@
 	</div>
 	<hr>
 	<div class="operation">
-	<a href=":blank">2. Table Data</a> - Group by on Column(s)
+	<a href=":blank">2. Operations on Tabular Data</a> - Group by on Column(s)
 	<div class="example">
 	<span class="ioexample">Example:</span>
 	<div class="ioDiv">
@@ -85,7 +85,7 @@
 	</div>
 	<hr>
 	<div class="operation">
-	<a href=":blank">4. Delimit/Tokenize List</a> - Choose your own Tokenizer
+	<a href="delimit">4. Delimit/Tokenize List</a> - Choose your own Tokenizer
 	<div class="example">
 	<span class="ioexample">Example:</span>
 	<div class="ioDiv">

@@ -20,6 +20,7 @@
 		            })
 			}
 			else {
+				clearContents();
 				$scope.results = "Error: Input is required!"
 			}
 		};

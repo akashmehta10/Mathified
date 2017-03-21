@@ -18,8 +18,7 @@ public class Basic {
  
 	@RequestMapping("/basic")
 	public ModelAndView basic() {
-		String message = "Coming from Home";
-		return new ModelAndView("basic", "message", message);
+		return new ModelAndView("basic");
 	}
 	
 	@RequestMapping(value = "/basic/results", method = RequestMethod.GET)

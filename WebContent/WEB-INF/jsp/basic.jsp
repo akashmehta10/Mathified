@@ -15,7 +15,7 @@
 	<div class="body" ng-app="basic-operations-app" ng-controller="myCtrl">
 	<form name="myForm">
 		<div class="operationHeader">
-			Basic Operations
+			Get Statistics on List of Numbers
 		</div>
 		<div class="input">Input Numbers (line, space or comma separated)*:
 		<div>
