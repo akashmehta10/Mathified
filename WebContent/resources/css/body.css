@@ -87,12 +87,15 @@ tr:nth-child(even) {
 }
 
 .buttonSubmit {
-	width: 100%;
 	margin-top: 10px;
 	background: #ff9999;
 	border: 2px solid #ff9999;
 	font-weight: bold;
 	height: 30px;
+}
+
+.buttonWidth {
+	width: 100%;
 }
 
 .delimitterInput {

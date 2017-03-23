@@ -26,7 +26,7 @@
 					  <input class="delimitterInput" type="text" ng-model="delimitter_input" required maxlength="2"/>
 		</div>
 		<div>
-					  <input class="buttonSubmit" type="button" value="Delmit" ng-click="loadResults()"/>
+					  <input class="buttonSubmit buttonWidth" type="button" value="Delmit" ng-click="loadResults()"/>
 		</div>
 <div class="result">{{results}}</div>
 		</div>
