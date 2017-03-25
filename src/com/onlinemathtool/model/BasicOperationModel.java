@@ -1,5 +1,7 @@
 package com.onlinemathtool.model;
 
+import com.onlinemathtool.helper.Helper;
+
 public class BasicOperationModel {
 	private String numberList;
 	private float sum;
@@ -17,23 +19,8 @@ public class BasicOperationModel {
 		return numberList;
 	}
 	
-	public float[] getNumberArray(String listOfNumbers) {
-		try {
-			String []stringArray = listOfNumbers.split(",");
-			float []numberArray = new float[stringArray.length];
-			int counter = 0;
-			for(String s: stringArray) {
-				numberArray[counter++] = Float.parseFloat(s);
-			}
-			return numberArray;
-		}
-		catch(Exception exception) {
-			return null;
-		}
-	}
-	
 	public void setResult(String listOfNumbers) {
-		float [] numberArray = getNumberArray(listOfNumbers);
+		float [] numberArray = Helper.getNumberArray(listOfNumbers);
 		if(numberArray == null) {
 			success = false;
 			return;

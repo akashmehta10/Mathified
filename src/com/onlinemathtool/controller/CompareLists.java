@@ -7,24 +7,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import com.onlinemathtool.model.BasicOperationModel;
 import org.json.*;
-/*
- * author: Akash Mehta
- * 
- */
- 
+
 @Controller
-public class Basic {
- 
-	@RequestMapping("/basic")
+public class CompareLists {
+	@RequestMapping("/compare")
 	public ModelAndView basic() {
-		return new ModelAndView("basic");
+		return new ModelAndView("compare");
 	}
 	
-	@RequestMapping(value = "/basic/results", method = RequestMethod.GET)
+	@RequestMapping(value = "/compare/lists", method = RequestMethod.GET)
 	@ResponseBody
-	public String getBasicResults(String numberList) {
+	public String getBasicResults(String list1, String list2) {
 		BasicOperationModel resultObj = new BasicOperationModel();
-		resultObj.setResult(numberList);
+		//resultObj.setResult(numberList);
 		JSONObject jsonObject = new JSONObject(resultObj);
 		String myJson  =jsonObject.toString();
 		return myJson;

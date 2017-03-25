@@ -25,11 +25,11 @@
 	</div>
 	<hr>
 	<div class="operation">
-	<a href=":blank">2. Operations on Tabular Data</a> - Group by on Column(s)
+	<a href=":blank">2. Operations on Tabular Data</a> - Group by on column, Group by on column and then sum/count other columns
 	<div class="example">
 	<span class="ioexample">Example:</span>
 	<div class="ioDiv">
-	<span class="ioexample">Input:</span>
+	<span class="ioexample">Input: </span>Group by Occupation and count Names
 	<table>
 	<tr>
 	<th>#</th>
