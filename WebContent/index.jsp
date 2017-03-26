@@ -73,7 +73,7 @@
 	</div>
 	<hr>
 	<div class="operation">
-	<a href=":blank">3. Compare 2 Lists</a> - Find Common/Uncommon Elements in 2 Lists
+	<a href="compare">3. Compare 2 Lists</a> - Find Common/Uncommon Elements in 2 Lists
 	<div class="example">
 	<span class="ioexample">Example:</span>
 	<div class="ioDiv">

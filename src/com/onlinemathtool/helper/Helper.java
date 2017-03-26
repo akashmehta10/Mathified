@@ -1,5 +1,10 @@
 package com.onlinemathtool.helper;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class Helper {
 	public static float[] getNumberArray(String listOfNumbers) {
 		try {
@@ -16,13 +21,17 @@ public class Helper {
 		}
 	}
 
-	public static String[] getStringArray(String list) {
+	public static List<String> getStringList(String list) {
 		try {
-			String []stringArray = list.split(",");
-			return stringArray;
+			List<String> listString = Arrays.asList(list.split(","));
+			return listString;
 		}
 		catch(Exception exception) {
 			return null;
 		}
-	}	
+	}
+	
+	public static Set<String> getSetFromList(List<String> stringList) {
+		return new HashSet<>(stringList);
+	}
 }
