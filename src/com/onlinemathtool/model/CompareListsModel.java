@@ -1,6 +1,7 @@
 package com.onlinemathtool.model;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -10,9 +11,9 @@ public class CompareListsModel {
 	private String list1;
 	private String list2;
 	private List<String> commonElements;
-	private String list1Only;
-	private String list2Only;
-	private String list1OrList2;
+	private List<String> list1Only;
+	private List<String> list2Only;
+	private Set<String> list1OrList2;
 	private Boolean success;
 	
 	public void setList1(String _list1) {
@@ -36,7 +37,8 @@ public class CompareListsModel {
 		List<String> listString2 = Helper.getStringList(_list2);
 		if(listString1 != null && listString2 != null) {
 			Set<String> setList1 = Helper.getSetFromList(listString1);
-			setCommonElements(setList1, listString2);
+			Set<String> setList2 = Helper.getSetFromList(listString2);
+			setCommonElements(setList1, setList2);
 			success = true;
 		}
 		else {
@@ -45,17 +47,43 @@ public class CompareListsModel {
 		
 	}
 	
-	public void setCommonElements(Set<String> setList1, List<String> list2) {
+	public void setCommonElements(Set<String> setList1, Set<String> setList2) {
 		commonElements = new ArrayList<String>();
-		for(String s: list2) {
-			if(setList1.contains(s)) {
+		list1Only = new ArrayList<String>();
+		list2Only = new ArrayList<String>();
+		list1OrList2 = new HashSet<String>();
+		for(String s: setList1) {
+			list1OrList2.add(s);
+			if(setList2.contains(s)) {
 				commonElements.add(s);
+			}
+			else {
+				list1Only.add(s);
+			}
+		}
+		
+		for(String s: setList2) {
+			list1OrList2.add(s);
+			if(!setList1.contains(s)) {
+				list2Only.add(s);
 			}
 		}
 	}
 	
 	public List<String> getCommonElements() {
 		return commonElements;
+	}
+	
+	public List<String> getList1Only() {
+		return list1Only;
+	}
+	
+	public List<String> getList2Only() {
+		return list2Only;
+	}
+	
+	public Set<String> getList1OrList2() {
+		return list1OrList2;
 	}
 	
 	public void setSuccess(Boolean _success) {

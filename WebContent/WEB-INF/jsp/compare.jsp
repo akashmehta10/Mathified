@@ -20,7 +20,7 @@
 				Input (line, space or comma separated)*:
 				<div class="container">
 					<div>
-						<textarea name="list1_textarea" class="textareaInput textarea"
+						<textarea name="list1_textarea" class="textarea"
 							rows="25" cols="45" ng-model="input_list1" ng-trim="false"
 							type="text" required></textarea>
 						<textarea name="list2_textarea" class="textareaOutput textarea"
@@ -28,14 +28,17 @@
 							type="text" required></textarea>
 					</div>
 				</div>
-					
+
 			</div>
 			<div>
-					<input class="buttonSubmit" type="button" value="Compare" ng-click="loadResults()"/>
+				<input class="buttonSubmit" type="button" value="Compare"
+					ng-click="loadResults()" />
 			</div>
-			
-		<div class="result">{{results}}</div>
-		<div class="result">{{commonElements}}</div>
+			<div class="result">{{results}}</div>
+			<div class="result">{{commonElements}}</div>
+			<div class="result">{{list1Only}}</div>
+			<div class="result">{{list2Only}}</div>
+			<div class="result">{{list1OrList2}}</div>
 		</form>
 	</div>
 </body>

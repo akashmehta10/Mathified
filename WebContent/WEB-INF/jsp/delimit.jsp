@@ -20,7 +20,7 @@
 		<div class="input">Input (line, space or comma separated)*:
 		<div class="container">
 		<div>
-		<textarea name="list_textarea" class="textareaInput textarea" rows="25" cols="45" ng-model="input_list" ng-trim="false"  type="text" required></textarea>
+		<textarea name="list_textarea" class="textarea" rows="25" cols="45" ng-model="input_list" ng-trim="false"  type="text" required></textarea>
 		<div class="centerInputOutputDiv">
 		<div>
 					  <input class="delimitterInput" type="text" ng-model="delimitter_input" required maxlength="2"/>

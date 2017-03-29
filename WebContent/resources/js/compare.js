@@ -7,6 +7,9 @@
 						clearContents();
 						$scope.results = "Result: ";
 						$scope.commonElements = "Common Elements: " + response.data.commonElements;
+						$scope.list1Only = "List1 Only Elements: " + response.data.list1Only;
+						$scope.list2Only = "List2 Only Elements: " + response.data.list2Only;
+						$scope.list1OrList2 = "List1 or List2 Elements: " + response.data.list1OrList2;
 					}
 					else {
 						clearContents();
@@ -22,6 +25,9 @@
 		};
 	    function clearContents() {
 			$scope.commonElements = null;
+			$scope.list1Only = null;
+			$scope.list2Only = null;
+			$scope.list1OrList2 = null;
 	        // Internal function, only available to code executed after
 	        // localFunc is declared
 	    };
