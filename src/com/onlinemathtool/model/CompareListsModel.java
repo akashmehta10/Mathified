@@ -38,35 +38,28 @@ public class CompareListsModel {
 		if(listString1 != null && listString2 != null) {
 			Set<String> setList1 = Helper.getSetFromList(listString1);
 			Set<String> setList2 = Helper.getSetFromList(listString2);
-			setCommonElements(setList1, setList2);
-			success = true;
+			commonElements = new ArrayList<String>();
+			list1Only = new ArrayList<String>();
+			list2Only = new ArrayList<String>();
+			list1OrList2 = new HashSet<String>();
+			for(String s: setList1) {
+				list1OrList2.add(s);
+				if(setList2.contains(s)) {
+					commonElements.add(s);
+				}
+				else {
+					list1Only.add(s);
+				}
+			}
+			for(String s: setList2) {
+				list1OrList2.add(s);
+				if(!setList1.contains(s)) {
+					list2Only.add(s);
+				}
+			}			success = true;
 		}
 		else {
 			success = false;
-		}
-		
-	}
-	
-	public void setCommonElements(Set<String> setList1, Set<String> setList2) {
-		commonElements = new ArrayList<String>();
-		list1Only = new ArrayList<String>();
-		list2Only = new ArrayList<String>();
-		list1OrList2 = new HashSet<String>();
-		for(String s: setList1) {
-			list1OrList2.add(s);
-			if(setList2.contains(s)) {
-				commonElements.add(s);
-			}
-			else {
-				list1Only.add(s);
-			}
-		}
-		
-		for(String s: setList2) {
-			list1OrList2.add(s);
-			if(!setList1.contains(s)) {
-				list2Only.add(s);
-			}
 		}
 	}
 	

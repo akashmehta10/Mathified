@@ -17,29 +17,48 @@
 		<form name="myForm">
 			<div class="operationHeader">Compare 2 Lists</div>
 			<div class="input">
-				Input (line, space or comma separated)*:
+				<div class="textareaInput">Input 1 (line, space or comma
+					separated)*:</div>
+				<div class="textareaOutput">Input 2 (line, space or comma
+					separated)*:</div>
 				<div class="container">
 					<div>
-						<textarea name="list1_textarea" class="textarea"
-							rows="25" cols="45" ng-model="input_list1" ng-trim="false"
-							type="text" required></textarea>
+						<textarea name="list1_textarea" class="textarea" rows="25"
+							cols="45" ng-model="input_list1" ng-trim="false" type="text"
+							required></textarea>
 						<textarea name="list2_textarea" class="textareaOutput textarea"
 							rows="25" cols="45" ng-model="input_list2" ng-trim="false"
 							type="text" required></textarea>
 					</div>
 				</div>
-
 			</div>
 			<div>
 				<input class="buttonSubmit" type="button" value="Compare"
 					ng-click="loadResults()" />
 			</div>
 			<div class="result">{{results}}</div>
-			<div class="result">{{commonElements}}</div>
-			<div class="result">{{list1Only}}</div>
-			<div class="result">{{list2Only}}</div>
-			<div class="result">{{list1OrList2}}</div>
-		</form>
+			<div class="container">
+				<div>
+					<textarea class="textarea" rows="25" cols="45"
+						ng-model="commonElements" ng-trim="false" type="text"
+						ng-show="commonElementsShow" ng-readonly="true"></textarea>
+					<textarea class="textareaOutput textarea" rows="25" cols="45"
+						ng-model="list1Only" ng-trim="false" type="text"
+						ng-show="list1OnlyShow" ng-readonly="true"></textarea>
+				</div>
+			</div>
+			<div class="container">
+				<div>
+					<textarea class="textarea" rows="25" cols="45" ng-model="list2Only"
+						ng-trim="false" type="text" ng-show="list2OnlyShow"
+						ng-readonly="true"></textarea>
+					<textarea class="textareaOutput textarea" rows="25" cols="45"
+						ng-model="list1OrList2" ng-trim="false" type="text"
+						ng-show="list1OrList2Show" ng-readonly="true"></textarea>
+				</div>
+			</div>
+	</div>
+	</form>
 	</div>
 </body>
 </html>
