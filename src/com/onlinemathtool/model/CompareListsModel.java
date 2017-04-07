@@ -56,7 +56,8 @@ public class CompareListsModel {
 				if(!setList1.contains(s)) {
 					list2Only.add(s);
 				}
-			}			success = true;
+			}
+			success = true;
 		}
 		else {
 			success = false;

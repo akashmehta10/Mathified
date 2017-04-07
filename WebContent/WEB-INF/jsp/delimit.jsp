@@ -30,7 +30,7 @@
 		</div>
 <div class="result">{{results}}</div>
 		</div>
-	    <textarea name="output_list_textarea" class="textareaOutput textarea" rows="25" cols="45" ng-model="output_list" ng-trim="false"  type="text" disabled></textarea>
+	    <textarea name="output_list_textarea" class="textareaOutput textarea" rows="25" cols="45" ng-model="output_list" ng-trim="false"  type="text" ng-readonly="true"></textarea>
 		</div>
 		</div>
 		</div>
