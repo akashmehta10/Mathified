@@ -8,10 +8,26 @@
 						clearContents();
 						$scope.results = "Result: ";
 						showResultTexts();
-						$scope.commonElements = "Common Elements:\n" + response.data.commonElements;
-						$scope.list1Only = "Input 1 Only Elements:\n" + response.data.list1Only;
-						$scope.list2Only = "Input 2 Only Elements:\n" + response.data.list2Only;
-						$scope.list1OrList2 = "Input 1 or Input 2 Elements:\n" + response.data.list1OrList2;
+						//$scope.commonElements = "Common Elements:\n" + response.data.commonElements;
+						$scope.commonElements = "Common Elements:\n";
+						for(var i = 0; i < response.data.commonElements.length; i++) {
+							$scope.commonElements += response.data.commonElements[i] + "\n";
+						}
+						
+						$scope.list1Only = "Input 1 Only Elements:\n";
+						for(var i = 0; i < response.data.list1Only.length; i++) {
+							$scope.list1Only += response.data.list1Only[i] + "\n";
+						}
+						
+						$scope.list2Only = "Input 2 Only Elements:\n";
+						for(var i = 0; i < response.data.list2Only.length; i++) {
+							$scope.list2Only += response.data.list2Only[i] + "\n";
+						}
+						
+						$scope.list1OrList2 = "Input 1 or Input 2 Elements:\n";
+						for(var i = 0; i < response.data.list1OrList2.length; i++) {
+							$scope.list1OrList2 += response.data.list1OrList2[i] + "\n";
+						}
 					}
 					else {
 						clearContents();

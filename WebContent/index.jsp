@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="resources/css/header.css" />
 <link rel="stylesheet" type="text/css" href="resources/css/body.css" />
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu">
+<link rel="stylesheet" type="text/css" href="resources/css/footer.css" />
 </head>
 <body>
 	<jsp:include page="/WEB-INF/jsp/header.jsp" />
@@ -17,9 +18,9 @@
 	<div class="example">
 	<span class="ioexample">Example:</span>
 	<div class="ioDiv">
-	<span class="ioexample">Input: </span>[3,2,5]
+	<span class="ioexample">Input: </span>3,2,5
 	<br/><br/>
-	<span class="ioexample">Output: </span>Sum = 10, Multiplication = 30, Sort = [2,3,5], Count = 3
+	<span class="ioexample">Output: </span>Count =3, Sum = 10, Average = 3.33, Standard Deviation = 1.247, Variance = 1.55
 	</div>
 	</div>
 	</div>
@@ -77,7 +78,7 @@
 	<div class="example">
 	<span class="ioexample">Example:</span>
 	<div class="ioDiv">
-	<span class="ioexample">Input: </span>List1: [3,2,5], List2: [3,1,5]
+	<span class="ioexample">Input: </span>List1: 3,2,5 and List2: 3,1,5
 	<br/><br/>
 	<span class="ioexample">Output: </span>List1 AND List2 = [3,5], Only in List1 = [2], Only in List2 = [1], List1 OR List2 = [3,2,5,1]
 	</div>
@@ -89,12 +90,13 @@
 	<div class="example">
 	<span class="ioexample">Example:</span>
 	<div class="ioDiv">
-	<span class="ioexample">Input: </span>[4 6 5]
+	<span class="ioexample">Input: </span>4 6 5
 	<br/><br/>
 	<span class="ioexample">Output: </span>[4,6,5] OR [4|6|5] OR [4:6:5] OR Anything You Want!
 	</div>
 	</div>
 	</div>
 	</div>
+	<jsp:include page="/WEB-INF/jsp/footer.jsp" />
 </body>
 </html>

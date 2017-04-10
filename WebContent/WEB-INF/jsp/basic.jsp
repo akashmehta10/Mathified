@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="resources/css/header.css" />
 <link rel="stylesheet" type="text/css" href="resources/css/body.css" />
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu">
+<link rel="stylesheet" type="text/css" href="resources/css/footer.css" />
 <script src="resources/js/angular.min.js"></script>
 <script src="resources/js/basic-operations.js"></script>
 </head>
@@ -33,5 +34,6 @@
 		<div class="result">{{variance}}</div>
 	</form>
 	</div>
+	<jsp:include page="/WEB-INF/jsp/footer.jsp" />
 </body>
 </html>
