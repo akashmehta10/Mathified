@@ -115,3 +115,8 @@ tr:nth-child(even) {
 .container {
   position: relative;
 }
+
+#inputDataList {
+	width: 100%;
+}
+
