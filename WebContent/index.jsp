@@ -26,7 +26,7 @@
 	</div>
 	<hr>
 	<div class="operation">
-	<a href=":blank">2. Operations on Tabular Data</a> - Group by on column, Group by on column and then sum/count other columns
+	<a href="grid">2. Operations on Tabular Data</a> - Group by on column, Group by on column and then sum/count other columns
 	<div class="example">
 	<span class="ioexample">Example:</span>
 	<div class="ioDiv">
