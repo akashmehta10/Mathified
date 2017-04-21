@@ -47,7 +47,7 @@
   </hot-table>
 		</div>
 		<div>
-		<input class="buttonSubmit" type="button" value="Calculate" ng-click="loadResults()"/>
+		<input class="buttonSubmit" type="button" value="Calculate" ng-click="ctrl.loadResults()"/>
 		</div>
 	</form>
 	</div>
