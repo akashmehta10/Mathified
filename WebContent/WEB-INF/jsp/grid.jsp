@@ -31,7 +31,7 @@
     settings="ctrl.settings"
     row-headers="ctrl.rowHeaders"
     min-spare-rows="ctrl.minSpareRows"
-    datarows="ctrl.db.items"
+    datarows="ctrl.db.items" on-after-selection="ctrl.onAfterSelection"
     height="300"
     width="700">
       <hot-column data="column1" title="'Column1'"></hot-column>
@@ -45,6 +45,9 @@
       <hot-column data="column9" title="'Column9'"></hot-column>
       <hot-column data="column10" title="'Column10'"></hot-column>
   </hot-table>
+		</div>
+		<div>
+		 Group by on column: <span>{{ selectedColumn + 1}}</span>
 		</div>
 		<div>
 		<input class="buttonSubmit" type="button" value="Calculate" ng-click="ctrl.loadResults()"/>
