@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.onlinemathtool.helper.Helper;
+import com.onlinemathtool.model.GridModel;
  
 @Controller
 public class Grid {
@@ -25,6 +26,19 @@ public class Grid {
 	@RequestMapping(value = "/grid/data", method = RequestMethod.POST)
 	@ResponseBody
 	public String getGridResults(@RequestBody String gridData, String selectedColumn) {
-		return Helper.getGroupByResult(gridData, selectedColumn);
+		if(gridData !=null && selectedColumn != null) {
+			List<GridModel> gridModelList = Helper.getGroupByCountResult(Helper.getGroupByRawHashMap(gridData, selectedColumn));
+			//System.out.println(result.toString());
+			JSONArray array = new JSONArray();
+			for (GridModel gridModelObj : gridModelList) {
+			    JSONObject obj = new JSONObject();
+			    obj.put("key", gridModelObj.getColumnValue());
+			    obj.put("value", gridModelObj.getGroupByValue());
+			    array.put(obj);
+			}
+			System.out.println(array.toString());
+			return array.toString();
+		}
+		return null;
 	}
 }
