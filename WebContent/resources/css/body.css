@@ -120,3 +120,37 @@ tr:nth-child(even) {
 	width: 100%;
 }
 
+.groupByColumn {
+	margin-top: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #ff9999;
+}
+
+.groupByColumnValue {
+	color: #000;
+}
+
+.btnGroupBy {
+	margin-top: 10px;
+}
+
+.groupByResult {
+	margin-top: 40px;
+}
+
+.groupByResultText {
+	color: #ff9999;
+	font-weight: bold;
+}
+
+.tableGroupResult {
+}
+
+.floatLeft {
+	float: left;
+}
+
+.marginRight {
+	margin-right: 30px;
+}

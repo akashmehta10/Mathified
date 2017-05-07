@@ -1,8 +1,9 @@
 function MainCtrl(dataFactory, $http, $scope) {
+	  $scope.groupByResultShow = false;
 	  this.rowHeaders = true;
 	  this.colHeaders = true;
 	  this.db = {
-			    items: dataFactory.generateArrayOfArrays(2, 2)
+			    items: dataFactory.generateArrayOfArrays(100, 2)
 			  };
 	  this.settings = {
 			    contextMenu: [
@@ -10,9 +11,6 @@ function MainCtrl(dataFactory, $http, $scope) {
 			    ]
 			  };
 	 this.loadResults= function() {
-		 //alert("I was clicked");
-		 //alert(this.db.items.length);
-		 //var finalData = [];
 		 var finalData = {
 				    gridData: []
 				};
@@ -30,9 +28,15 @@ function MainCtrl(dataFactory, $http, $scope) {
 		    		"col10":this.db.items[i].column10
 		    	});
 	    }
-		    //alert(JSON.stringify(finalData));
-		 $http.post("/OnlineMathTool/grid/data?selectedColumn="+$scope.selectedColumn,JSON.stringify(finalData)).then(function(response) {
-				if(response.data.success == true) {
+		    var groupBySumColumn = "";
+		    if($scope.groupBySumColumn != "" && $scope.groupBySumColumn != "N/A") {
+		    	groupBySumColumn = $scope.groupBySumColumn;
+		    }
+
+		 $http.post("/OnlineMathTool/grid/data?selectedColumn="+$scope.selectedColumn+"&groupBySumColumn="+groupBySumColumn,JSON.stringify(finalData)).then(function(response) {
+				if(response.data != null) {
+					$scope.groupByResultShow = true;
+					$scope.groupByResult = response.data;
 				}
 				else {
 				}

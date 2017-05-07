@@ -58,7 +58,7 @@ public class Helper {
 					ArrayList<String> sameRowEntries = new ArrayList<String>(10);	
 					for(int j = 1; j < 10; j++) {
 						if(jsonRow.has("col"+j)) {
-							sameRowEntries.add(j - 1, jsonRow.getString("col"+j));
+							sameRowEntries.add(jsonRow.getString("col"+j));
 						}
 					}	
 					if(!groupByGridData.containsKey(colVal)) {
@@ -81,16 +81,17 @@ public class Helper {
 		}
 	}
 	
-	public static List<GridModel> getGroupByCountResult(Map<String, List<ArrayList<String>>> groupByRawGridData) {
+	public static JSONArray getGroupByJsonArrayResult(List<GridModel> gridModelList) {
 		try {
-			List<GridModel> groupByGridModelList = new ArrayList<GridModel>();
-			for(String key: groupByRawGridData.keySet()) {
-				GridModel gridModelObj = new GridModel();
-				gridModelObj.setColumnValue(key);
-				gridModelObj.setGroupByValue(groupByRawGridData.get(key).size());
-				groupByGridModelList.add(gridModelObj);
+			JSONArray jsonArray = new JSONArray();
+			for (GridModel gridObj : gridModelList) {
+			    JSONObject obj = new JSONObject();
+			    obj.put("key", gridObj.getColumnValue());
+			    obj.put("value", gridObj.getGroupByValue());
+			    jsonArray.put(obj);
 			}
-			return groupByGridModelList;
+			System.out.println(jsonArray.toString());
+			return jsonArray;
 		}
 		catch(Exception exception) {
 			return null;
