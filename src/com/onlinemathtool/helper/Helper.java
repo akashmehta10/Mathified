@@ -81,8 +81,11 @@ public class Helper {
 		}
 	}
 	
-	public static JSONArray getGroupByJsonArrayResult(List<GridModel> gridModelList) {
+	public static JSONObject getGroupByJsonArrayResult(List<GridModel> gridModelList, String selectedColumn, String groupBySumColumn) {
 		try {
+			JSONObject resultJSONObject = new JSONObject();
+			resultJSONObject.put("groupByOperation", groupBySumColumn == null || groupBySumColumn.isEmpty() || groupBySumColumn.equals("undefined") ? "Count" : "Sum");
+			resultJSONObject.put("selectedColumn", Integer.parseInt(selectedColumn) + 1);
 			JSONArray jsonArray = new JSONArray();
 			for (GridModel gridObj : gridModelList) {
 			    JSONObject obj = new JSONObject();
@@ -91,7 +94,9 @@ public class Helper {
 			    jsonArray.put(obj);
 			}
 			System.out.println(jsonArray.toString());
-			return jsonArray;
+			resultJSONObject.put("success", true);
+			resultJSONObject.put("resultArray", jsonArray);
+			return resultJSONObject;
 		}
 		catch(Exception exception) {
 			return null;

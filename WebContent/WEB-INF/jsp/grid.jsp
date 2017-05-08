@@ -60,14 +60,12 @@
 			</div>
 		</form>
 		<div class="groupByResult" ng-show="groupByResultShow">
-			<div class="groupByResultText">Result:</div>
+			<div class="groupByResultText">Result: {{ inputErrorFromServer }}</div>
 			<div class="tableGroupResult">
 				<table>
 					<tr>
-						<th>Column{{ selectedColumn + 1}}</th>
-						<th>Count/Sum</th>
-<!-- 						<th>{{ groupBySumColumn === 'N/A' ? -->
-<!-- 							'Count' : 'Sum' }}</th> -->
+						<th>Column{{ selectedColumnFromServer }}</th>
+						<th>{{ groupByOperationFromServer }} </th>
 					</tr>
 					<tr ng-repeat="result in groupByResult">
 						<td>{{ result.key }}</td>

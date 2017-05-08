@@ -34,11 +34,15 @@ function MainCtrl(dataFactory, $http, $scope) {
 		    }
 
 		 $http.post("/OnlineMathTool/grid/data?selectedColumn="+$scope.selectedColumn+"&groupBySumColumn="+groupBySumColumn,JSON.stringify(finalData)).then(function(response) {
-				if(response.data != null) {
+				if(response.data.success == true) {
 					$scope.groupByResultShow = true;
-					$scope.groupByResult = response.data;
+					$scope.groupByOperationFromServer = response.data.groupByOperation;
+					$scope.selectedColumnFromServer = response.data.selectedColumn;
+					$scope.groupByResult = response.data.resultArray;
 				}
 				else {
+					$scope.groupByResultShow = true;
+					$scope.inputErrorFromServer = "Input Error";
 				}
 		 });
 	 }

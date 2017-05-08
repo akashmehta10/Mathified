@@ -1,6 +1,6 @@
 package com.onlinemathtool.controller;
 
-import org.json.JSONArray;
+import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,8 +29,8 @@ public class Grid {
 			else {
 				gridModelObj.setGroupBySumGridModelList(Helper.getGroupByRawHashMap(gridData, selectedColumn), groupBySumColumn);
 			}
-			JSONArray jsonArray = Helper.getGroupByJsonArrayResult(gridModelObj.getGroupByGridModelList());
-			return jsonArray.toString();
+			JSONObject jsonObject = Helper.getGroupByJsonArrayResult(gridModelObj.getGroupByGridModelList(),selectedColumn, groupBySumColumn);
+			return jsonObject.toString();
 		}
 		return null;
 	}
