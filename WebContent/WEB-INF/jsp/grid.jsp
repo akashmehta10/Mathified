@@ -62,7 +62,7 @@
 		<div class="groupByResult" ng-show="groupByResultShow">
 			<div class="groupByResultText">Result: {{ inputErrorFromServer }}</div>
 			<div class="tableGroupResult">
-				<table>
+				<table class="groupByResultTable">
 					<tr>
 						<th>Column{{ selectedColumnFromServer }}</th>
 						<th>{{ groupByOperationFromServer }} </th>

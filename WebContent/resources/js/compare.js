@@ -3,7 +3,13 @@
 		hideResultTexts();
 		$scope.loadResults= function() {
 			if($scope.myForm.$valid == true) {
-				$http.get("/OnlineMathTool/compare/lists?list1="+$scope.input_list1.replace(/\s{1,}|\n{1,}|\r{1,/g, ',')+"&list2="+$scope.input_list2.replace(/\s{1,}|\n{1,}|\r{1,/g, ',')).then(function(response) {
+				 var finalData = {
+						    lists: {
+						    	"list1":$scope.input_list1.replace(/\s{1,}|\n{1,}|\r{1,/g, ','),
+						    	"list2":$scope.input_list2.replace(/\s{1,}|\n{1,}|\r{1,/g, ',')
+						    }
+						};
+				$http.post("/OnlineMathTool/compare/lists", JSON.stringify(finalData)).then(function(response) {
 					if(response.data.success == true) {
 						clearContents();
 						$scope.results = "Result: ";

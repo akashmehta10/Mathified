@@ -1,6 +1,7 @@
 package com.onlinemathtool.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -16,13 +17,20 @@ public class CompareLists {
 		return new ModelAndView("compare");
 	}
 	
-	@RequestMapping(value = "/compare/lists", method = RequestMethod.GET)
+	@RequestMapping(value = "/compare/lists", method = RequestMethod.POST)
 	@ResponseBody
-	public String getBasicResults(String list1, String list2) {
-		CompareListsModel resultObj = new CompareListsModel();
-		resultObj.setResult(list1, list2);
-		JSONObject jsonObject = new JSONObject(resultObj);
-		String myJson  =jsonObject.toString();
-		return myJson;
+	public String getBasicResults(@RequestBody String lists) {
+		JSONObject jsonObject = new JSONObject(lists);
+		if(jsonObject != null && jsonObject.has("lists")) {
+			JSONObject jsonObjectLists = jsonObject.getJSONObject("lists");
+			if(jsonObjectLists != null && jsonObjectLists.has("list1") && jsonObjectLists.has("list2")) {
+				CompareListsModel resultObj = new CompareListsModel();
+				resultObj.setResult(jsonObjectLists.getString("list1"), jsonObjectLists.getString("list2"));
+				JSONObject jsonObjectResult = new JSONObject(resultObj);
+				String jsonObjectResultString  =jsonObjectResult.toString();
+				return jsonObjectResultString;
+			}
+		}
+		return null;
 	}
 }

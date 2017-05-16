@@ -154,3 +154,11 @@ tr:nth-child(even) {
 .marginRight {
 	margin-right: 30px;
 }
+
+.groupByResultTable {
+   overflow-x:scroll;
+   overflow-y:scroll;
+   height:300px;
+   width: 900px;
+   display:block;
+}
