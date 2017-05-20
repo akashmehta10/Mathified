@@ -102,4 +102,28 @@ public class Helper {
 			return null;
 		}
 	}
+	
+	public static String[] getListsFromJson(String listsJson) {
+		JSONObject jsonObject = new JSONObject(listsJson);
+		String[] listArray = new String[2];
+		if(jsonObject != null && jsonObject.has("lists")) {
+			JSONObject jsonObjectLists = jsonObject.getJSONObject("lists");
+			if(jsonObjectLists != null && jsonObjectLists.has("list1") && jsonObjectLists.has("list2")) {
+				listArray[0] = jsonObjectLists.getString("list1");
+				listArray[1] = jsonObjectLists.getString("list2");
+				return listArray;
+			}
+		}
+		return null;
+	}
+	
+	public static String getNumberListFromJson(String numberListJson) {
+		JSONObject jsonObject = new JSONObject(numberListJson);
+		String numberList;
+		if(jsonObject != null && jsonObject.has("numberList")) {
+			numberList = jsonObject.getString("numberList");
+			return numberList;
+		}
+		return null;
+	}
 }

@@ -2,7 +2,10 @@
 	app.controller('myCtrl', function($scope, $http) {
 		$scope.loadResults= function() {
 			if($scope.myForm.$valid == true) {
-				$http.get("/OnlineMathTool/basic/results?numberList="+$scope.number_list.replace(/\s{1,}|\n{1,}|\r{1,/g, ',')).then(function(response) {
+				 var finalData = {
+						    numberList:$scope.number_list.replace(/\s{1,}|\n{1,}|\r{1,/g, ',')
+						};
+				$http.post("/OnlineMathTool/basic/results", JSON.stringify(finalData)).then(function(response) {
 					if(response.data.success == true) {
 						clearContents();
 						$scope.results = "Result: ";
