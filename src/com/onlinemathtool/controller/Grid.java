@@ -1,5 +1,9 @@
 package com.onlinemathtool.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,14 +27,19 @@ public class Grid {
 	public String getGridResults(@RequestBody String gridData, String selectedColumn, String groupBySumColumn) {
 		if(gridData !=null && selectedColumn != null) {
 			GridModel gridModelObj = new GridModel();
-			if(groupBySumColumn == null || groupBySumColumn.isEmpty() || groupBySumColumn.equals("undefined")) {
-				gridModelObj.setGroupByCountGridModelList(Helper.getGroupByRawHashMap(gridData, selectedColumn));
+			Map<String, List<ArrayList<String>>> groupByGridData = Helper.getGroupByRawHashMap(gridData, selectedColumn);
+			if(groupByGridData != null) {
+				if(groupBySumColumn == null || groupBySumColumn.isEmpty() || groupBySumColumn.equals("undefined")) {
+					gridModelObj.setGroupByCountGridModelList(groupByGridData);
+				}
+				else {
+					gridModelObj.setGroupBySumGridModelList(groupByGridData, groupBySumColumn);
+				}
+				JSONObject jsonObject = Helper.getGroupByJsonArrayResult(gridModelObj.getGroupByGridModelList(),selectedColumn, groupBySumColumn);
+				if(jsonObject != null) {
+					return jsonObject.toString();
+				}
 			}
-			else {
-				gridModelObj.setGroupBySumGridModelList(Helper.getGroupByRawHashMap(gridData, selectedColumn), groupBySumColumn);
-			}
-			JSONObject jsonObject = Helper.getGroupByJsonArrayResult(gridModelObj.getGroupByGridModelList(),selectedColumn, groupBySumColumn);
-			return jsonObject.toString();
 		}
 		return null;
 	}
