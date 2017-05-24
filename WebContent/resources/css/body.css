@@ -162,3 +162,17 @@ tr:nth-child(even) {
    width: 900px;
    display:block;
 }
+
+.feedbackSection {
+	color: #ff9999;
+	margin-top: 15px;
+}
+
+.feedbackInput {
+	margin-left: 10px;
+	border: 1px solid #ff9999;
+}
+
+.textareaFeedback {
+	height: 150px !important;
+}

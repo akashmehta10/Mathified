@@ -135,6 +135,25 @@ public class Helper {
 		catch(Exception exception) {
 			return null;
 		}
-
+	}
+	
+	public static String[] getFeedbackFromJson(String feedback) {
+		try {
+			JSONObject jsonObject = new JSONObject(feedback);
+			String[] listArray = new String[3];
+			if(jsonObject != null && jsonObject.has("feedback")) {
+				JSONObject jsonObjectLists = jsonObject.getJSONObject("feedback");
+				if(jsonObjectLists != null && jsonObjectLists.has("name") && jsonObjectLists.has("email") && jsonObjectLists.has("feedbackText")) {
+					listArray[0] = jsonObjectLists.getString("name");
+					listArray[1] = jsonObjectLists.getString("email");
+					listArray[2] = jsonObjectLists.getString("feedbackText");
+					return listArray;
+				}
+			}
+			return null;
+		}
+		catch(Exception exception) {
+			return null;
+		}
 	}
 }
