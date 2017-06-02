@@ -8,14 +8,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.apache.log4j.Logger;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.onlinemathtool.model.GridModel;
 
 public class Helper {
-	//private static final Logger LOGGER = Logger.getLogger(Helper.class);
-	
+	private static final Logger logger = Logger.getLogger(Helper.class);
+
 	public static float[] getNumberArray(String listOfNumbers) {
 		try {
 			String []stringArray = listOfNumbers.split(",");
@@ -126,15 +127,21 @@ public class Helper {
 	
 	public static String getNumberListFromJson(String numberListJson) {
 		try {
+			logger.info("Processing number list JSON");
+			logger.debug("Number Input: " + numberListJson);
 			JSONObject jsonObject = new JSONObject(numberListJson);
+			logger.info("Converted number list JSON to JSON object");
 			String numberList;
 			if(jsonObject != null && jsonObject.has("numberList")) {
 				numberList = jsonObject.getString("numberList");
+				logger.info("Converted JSON string to comma separated string");
 				return numberList;
 			}
 			return null;
 		}
 		catch(Exception exception) {
+			logger.error("Got exception when converting number JSON string to comma separated string");
+			logger.error(exception.getMessage());
 			return null;
 		}
 	}
