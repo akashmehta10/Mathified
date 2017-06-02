@@ -1,5 +1,6 @@
 package com.onlinemathtool.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +13,9 @@ import com.onlinemathtool.model.FeedbackModel;
 
 @Controller
 public class Feedback {
+	@Value("${env.filelocation}")
+	private String fileLocation;
+	
 	@RequestMapping("/feedback")
 	public ModelAndView feedback() {
 		return new ModelAndView("feedback");
@@ -23,8 +27,7 @@ public class Feedback {
 		String[] feedbackArray = Helper.getFeedbackFromJson(feedback);
 		if(feedbackArray != null) {
 			FeedbackModel resultObj = new FeedbackModel();
-			resultObj.setResult(feedbackArray[0], feedbackArray[1], feedbackArray[2]);
-			//JSONObject jsonObjectResult = new JSONObject(resultObj.getSuccess());
+			resultObj.setResult(this.fileLocation, feedbackArray[0], feedbackArray[1], feedbackArray[2]);
 			String jsonObjectResultString  = "{\"success\":" + resultObj.getSuccess()+ "}";
 			return jsonObjectResultString;
 		}

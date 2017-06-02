@@ -20,7 +20,7 @@
 		</div>
 		<div class="feedbackSection">Name*:<input class="feedbackInput" type="text" ng-model="name" maxlength="20" required/>
 		</div>
-		<div class="feedbackSection">Email*:<input class="feedbackInput" type="email" ng-model="email" maxlength="20" required/>
+		<div class="feedbackSection">Email*:<input class="feedbackInput" type="email" ng-model="email" maxlength="40" required/>
 		</div>
 		<div class="feedbackSection">Feedback*:
 		</div>

@@ -7,29 +7,30 @@
 <link rel="stylesheet" type="text/css" href="resources/css/header.css" />
 <link rel="stylesheet" type="text/css" href="resources/css/body.css" />
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu">
+<link rel="stylesheet" type="text/css" href="resources/css/footer.css" />
 </head>
 <body>
 	<jsp:include page="/WEB-INF/jsp/header.jsp" />
 	<div class="body">
 	<div class="operationHeader">What can you do with <i>MATHIFIED?</i></div>
 	<div class="operation">
-	<a href="basic">1. Basic Operations</a> - Sum/Average/Multiply/Sort/Count on List of Numbers
+	<a href="basic">1. Get Statistics on List of Numbers</a> - Count/Sum/Average/Variance/Standard Deviation on List of Numbers
 	<div class="example">
 	<span class="ioexample">Example:</span>
 	<div class="ioDiv">
-	<span class="ioexample">Input: </span>[3,2,5]
+	<span class="ioexample">Input: </span>3,2,5
 	<br/><br/>
-	<span class="ioexample">Output: </span>Sum = 10, Multiplication = 30, Sort = [2,3,5], Count = 3
+	<span class="ioexample">Output: </span>Count =3, Sum = 10, Average = 3.33, Standard Deviation = 1.247, Variance = 1.55
 	</div>
 	</div>
 	</div>
 	<hr>
 	<div class="operation">
-	<a href=":blank">2. Table Data</a> - Group by on Column(s)
+	<a href="grid">2. Operations on Tabular Data</a> - Group by on column, Group by on column and then sum/count other columns
 	<div class="example">
 	<span class="ioexample">Example:</span>
 	<div class="ioDiv">
-	<span class="ioexample">Input:</span>
+	<span class="ioexample">Input: </span>Group by Occupation and count Names
 	<table>
 	<tr>
 	<th>#</th>
@@ -73,11 +74,11 @@
 	</div>
 	<hr>
 	<div class="operation">
-	<a href=":blank">3. Compare 2 Lists</a> - Find Common/Uncommon Elements in 2 Lists
+	<a href="compare">3. Compare 2 Lists</a> - Find Common/Uncommon Elements in 2 Lists
 	<div class="example">
 	<span class="ioexample">Example:</span>
 	<div class="ioDiv">
-	<span class="ioexample">Input: </span>List1: [3,2,5], List2: [3,1,5]
+	<span class="ioexample">Input: </span>List1: 3,2,5 and List2: 3,1,5
 	<br/><br/>
 	<span class="ioexample">Output: </span>List1 AND List2 = [3,5], Only in List1 = [2], Only in List2 = [1], List1 OR List2 = [3,2,5,1]
 	</div>
@@ -85,16 +86,17 @@
 	</div>
 	<hr>
 	<div class="operation">
-	<a href=":blank">4. Delimit/Tokenize List</a> - Choose your own Tokenizer
+	<a href="delimit">4. Delimit/Tokenize List</a> - Choose your own Tokenizer
 	<div class="example">
 	<span class="ioexample">Example:</span>
 	<div class="ioDiv">
-	<span class="ioexample">Input: </span>[4 6 5]
+	<span class="ioexample">Input: </span>4 6 5
 	<br/><br/>
 	<span class="ioexample">Output: </span>[4,6,5] OR [4|6|5] OR [4:6:5] OR Anything You Want!
 	</div>
 	</div>
 	</div>
 	</div>
+	<jsp:include page="/WEB-INF/jsp/footer.jsp" />
 </body>
 </html>

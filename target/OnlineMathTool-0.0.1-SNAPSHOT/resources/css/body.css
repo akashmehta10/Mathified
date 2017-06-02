@@ -61,17 +61,118 @@ tr:nth-child(even) {
 }
 .textarea {
 	width: 40%;
-	height: 120px;
+	height: 200px;
 	border: 3px solid #ff9999;
 	padding: 5px;
 	background-position: bottom right;
 	background-repeat: no-repeat;
+	word-break: break-word;
 }
+
+.textareaInput {
+	float: left;
+}
+
+.textareaOutput {
+	float: right;
+}
+
+.centerInputOutputDiv {
+	width: 10%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto	
+}
+
 .buttonSubmit {
-		width: 10%;
-		margin-top: 5px;
-		background: #ff9999;
-		padding: 3px;
-		border: 2px solid #ff9999;
-		font-weight: bold;
+	margin-top: 10px;
+	background: #ff9999;
+	border: 2px solid #ff9999;
+	font-weight: bold;
+	height: 30px;
+}
+
+.buttonWidth {
+	width: 100%;
+}
+
+.delimitterInput {
+	margin-top: 20px;
+	width: 20%;
+	border: 2px solid #ff9999;
+	height: 20px;
+	margin-left: 40%;
+	margin-right: 40%;	
+}
+.result {
+	margin-top: 20px;
+	font-weight: bold;
+	color: #000000;
+}
+
+.container {
+  position: relative;
+}
+
+#inputDataList {
+	width: 100%;
+}
+
+.groupByColumn {
+	margin-top: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #ff9999;
+}
+
+.groupByColumnValue {
+	color: #000;
+}
+
+.btnGroupBy {
+	margin-top: 10px;
+}
+
+.groupByResult {
+	margin-top: 40px;
+}
+
+.groupByResultText {
+	color: #ff9999;
+	font-weight: bold;
+}
+
+.tableGroupResult {
+}
+
+.floatLeft {
+	float: left;
+}
+
+.marginRight {
+	margin-right: 30px;
+}
+
+.groupByResultTable {
+   overflow-x:scroll;
+   overflow-y:scroll;
+   height:300px;
+   width: 900px;
+   display:block;
+}
+
+.feedbackSection {
+	color: #ff9999;
+	margin-top: 15px;
+}
+
+.feedbackInput {
+	margin-left: 10px;
+	border: 1px solid #ff9999;
+}
+
+.textareaFeedback {
+	height: 150px !important;
 }

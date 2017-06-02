@@ -1,5 +1,7 @@
 <div class="header" align="center">
-<div class="logo"><i><b>"MATHIFIED"</b></i></div>
-<div>All Your Math at One Place</div>
-
+	<div class="logo">
+		<a href="/OnlineMathTool"> <img
+			src="resources/images/Mathified-Logo.jpg" class="logoImg">
+		</a>
+	</div>
 </div>

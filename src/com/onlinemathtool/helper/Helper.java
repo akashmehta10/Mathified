@@ -14,6 +14,8 @@ import org.json.JSONObject;
 import com.onlinemathtool.model.GridModel;
 
 public class Helper {
+	//private static final Logger LOGGER = Logger.getLogger(Helper.class);
+	
 	public static float[] getNumberArray(String listOfNumbers) {
 		try {
 			String []stringArray = listOfNumbers.split(",");
