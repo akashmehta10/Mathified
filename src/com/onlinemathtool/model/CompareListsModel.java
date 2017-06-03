@@ -5,6 +5,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.log4j.Logger;
+
 import com.onlinemathtool.helper.*;
 
 public class CompareListsModel {
@@ -15,6 +17,7 @@ public class CompareListsModel {
 	private List<String> list2Only;
 	private Set<String> list1OrList2;
 	private Boolean success;
+	private static final Logger logger = Logger.getLogger(CompareListsModel.class);
 	
 	public void setList1(String _list1) {
 		list1 = _list1;
@@ -33,6 +36,7 @@ public class CompareListsModel {
 	}
 	
 	public void setResult(String _list1, String _list2) {
+		logger.info("Setting result to compare lists");
 		List<String> listString1 = Helper.getStringList(_list1);
 		List<String> listString2 = Helper.getStringList(_list2);
 		if(listString1 != null && listString2 != null) {
@@ -58,9 +62,15 @@ public class CompareListsModel {
 				}
 			}
 			success = true;
+			logger.info("Done processing comparison of lists");
+			logger.debug("Common elemets: " + commonElements);
+			logger.debug("List 1 only elements: " + list1Only);
+			logger.debug("List 2 only elements: " + list2Only);
+			logger.debug("List 1 or List 2 elemets: " + list1OrList2);
 		}
 		else {
 			success = false;
+			logger.error("Error processing comparison of lists");
 		}
 	}
 	
