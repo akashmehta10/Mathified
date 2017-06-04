@@ -49,16 +49,16 @@
 				Summing on Column:
 				<select ng-model="groupBySumColumn">
 				<option value="N/A">N/A</option>
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-				<option value="6">6</option>
-				<option value="7">7</option>
-				<option value="8">8</option>
-				<option value="9">9</option>
-				<option value="10">10</option>
+				<option value="0">1</option>
+				<option value="1">2</option>
+				<option value="2">3</option>
+				<option value="3">4</option>
+				<option value="4">5</option>
+				<option value="5">6</option>
+				<option value="6">7</option>
+				<option value="7">8</option>
+				<option value="8">9</option>
+				<option value="9">10</option>
 				</select>
 			</div>
 			<div class='btnGroupBy'>
@@ -66,8 +66,8 @@
 					ng-click="ctrl.loadResults()" />
 			</div>
 		</form>
+		<div class="groupByResultText" ng-show="groupByResultTextShow">Result: {{ inputErrorFromServer }}</div>
 		<div class="groupByResult" ng-show="groupByResultShow">
-			<div class="groupByResultText">Result: {{ inputErrorFromServer }}</div>
 			<div class="tableGroupResult">
 				<table class="groupByResultTable">
 					<tr>

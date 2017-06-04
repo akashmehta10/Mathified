@@ -71,6 +71,9 @@ public class Helper {
 						if(jsonRow.has("col"+j)) {
 							sameRowEntries.add(jsonRow.getString("col"+j));
 						}
+						else {
+							sameRowEntries.add("");
+						}
 					}	
 					if(!groupByGridData.containsKey(colVal)) {
 						List<ArrayList<String>> newKeyLists = new ArrayList<ArrayList<String>>();

@@ -58,7 +58,7 @@ public class GridModel {
 				gridModelObj.setColumnValue(key);
 				List<ArrayList<String>> groupByValueList = groupByRawGridData.get(key);
 				for(ArrayList<String> list : groupByValueList) {
-					sum += Integer.parseInt(list.get(Integer.parseInt(sumColumn) - 1));
+					sum += Integer.parseInt(list.get(Integer.parseInt(sumColumn)));
 				}
 				gridModelObj.setGroupByValue(sum);
 				groupByGridModelList.add(gridModelObj);
