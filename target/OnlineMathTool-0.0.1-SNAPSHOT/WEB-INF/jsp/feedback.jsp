@@ -8,6 +8,11 @@
 <link rel="stylesheet" type="text/css" href="resources/css/body.css" />
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu">
 <link rel="stylesheet" type="text/css" href="resources/css/footer.css" />
+<link rel="apple-touch-icon" sizes="180x180" href="resources/images/favicons_mathified/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="resources/images/favicons_mathified/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="resources/images/favicons_mathified/favicon-16x16.png">
+<link rel="manifest" href="resources/images/favicons_mathified/manifest.json">
+<meta name="theme-color" content="#5f5f5f">
 <script src="resources/js/angular.min.js"></script>
 <script src="resources/js/feedback.js"></script>
 </head>
@@ -20,7 +25,7 @@
 		</div>
 		<div class="feedbackSection">Name*:<input class="feedbackInput" type="text" ng-model="name" maxlength="20" required/>
 		</div>
-		<div class="feedbackSection">Email*:<input class="feedbackInput" type="email" ng-model="email" maxlength="20" required/>
+		<div class="feedbackSection">Email*:<input class="feedbackInput" type="email" ng-model="email" maxlength="40" required/>
 		</div>
 		<div class="feedbackSection">Feedback*:
 		</div>

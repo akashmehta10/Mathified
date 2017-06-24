@@ -15,6 +15,17 @@
 <meta name="theme-color" content="#5f5f5f">
 <script src="resources/js/angular.min.js"></script>
 <script src="resources/js/basic-operations.js"></script>
+<title>Statistics on Numbers - Count, Sum, Average, Variance, Standard Deviation - Mathified</title>
+<meta name="description" content="Get statistics on numbers - sum, count, average, variance, standard deviation on list of numbers">
+<meta name="keywords" content="Statistics On Numbers,Count,Sum,Average,Variance,Standard Deviation,Count Numbers,Sum Numbers,Average of Numbers,Variance of Numbers,Standard Deviation of Numbers,List Of Numbers,Numbers,Statistics,Analyze Numbers,Process Numbers">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-101594780-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </head>
 <body>
 	<jsp:include page="/WEB-INF/jsp/header.jsp" />

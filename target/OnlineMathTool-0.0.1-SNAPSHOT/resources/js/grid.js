@@ -1,5 +1,6 @@
 function MainCtrl(dataFactory, $http, $scope) {
 	  $scope.groupByResultShow = false;
+	  $scope.groupByResultTextShow = false;
 	  this.rowHeaders = true;
 	  this.colHeaders = true;
 	  this.db = {
@@ -11,6 +12,7 @@ function MainCtrl(dataFactory, $http, $scope) {
 			    ]
 			  };
 	 this.loadResults= function() {
+		 $scope.inputErrorFromServer = "";
 		 var finalData = {
 				    gridData: []
 				};
@@ -34,15 +36,16 @@ function MainCtrl(dataFactory, $http, $scope) {
 		    }
 
 		 $http.post("/OnlineMathTool/grid/data?selectedColumn="+$scope.selectedColumn+"&groupBySumColumn="+groupBySumColumn,JSON.stringify(finalData)).then(function(response) {
-				if(response.data.success == true) {
-					$scope.groupByResultShow = true;
+			 $scope.groupByResultTextShow = true;
+			 	if(response.data.success == true) {
+			 		$scope.groupByResultShow = true;
 					$scope.groupByOperationFromServer = response.data.groupByOperation;
 					$scope.selectedColumnFromServer = response.data.selectedColumn;
 					$scope.groupByResult = response.data.resultArray;
 				}
 				else {
-					$scope.groupByResultShow = true;
 					$scope.inputErrorFromServer = "Input Error";
+					$scope.groupByResultShow = false;
 				}
 		 });
 	 }

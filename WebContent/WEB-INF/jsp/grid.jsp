@@ -22,6 +22,17 @@
 <script src="resources/js/ngHandsontable.js"></script>
 <script src="resources/js/dataFactory.js"></script>
 <script src="resources/js/grid.js"></script>
+<title>Group By Data, Tabular Data, Excel Data, Grid Data - Mathified</title>
+<meta name="description" content="Perform Group by on tabular data, excel data, grid data. ">
+<meta name="keywords" content="Group By,Tabular Data,Excel Data,Grid Data,Group By Tabular Data,Group By Excel Data,Group By Grid Data,Process Tabular Data,Process Excel Data,Process Grid Data,Group By Column,Group By Column Tabular Data,Group By Column Excel Data,Group By Column Grid Data,Group By Count,Group By Count Tabular Data,Group By Count Excel Data,Group By Count Grid Data,Group By Sum,Group By Sum Tabular Data,Group By Sum Excel Data,Group By Sum Grid Data">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-101594780-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </head>
 <body data-ng-app="app">
 	<jsp:include page="/WEB-INF/jsp/header.jsp" />

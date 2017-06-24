@@ -13,6 +13,17 @@
 <link rel="icon" type="image/png" sizes="16x16" href="resources/images/favicons_mathified/favicon-16x16.png">
 <link rel="manifest" href="resources/images/favicons_mathified/manifest.json">
 <meta name="theme-color" content="#5f5f5f">
+<title>Process Data, Numbers, Text - Mathified</title>
+<meta name="description" content="Mathified.com for processing data, numbers or text. Get statistics on numbers - sum, count, average, variance, standard deviation on list of numbers. Perform Group by on tabular or excel data. Compare lists or text to find common elements, uncommon elements. Delimit/tokenize data, text">
+<meta name="keywords" content="Statistics On Numbers,Count,Sum,Average,Variance,Standard Deviation,Analyze Numbers,Process Numbers,Group By,Tabular Data,Excel Data,Grid Data,Compare lists,Compare Data,Compare Texts,Common Elements,Uncommon Elements,Missing Elements,Delmit,Tokenize">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-101594780-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </head>
 <body>
 	<jsp:include page="/WEB-INF/jsp/header.jsp" />

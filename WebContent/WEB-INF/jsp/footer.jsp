@@ -17,7 +17,7 @@
 </div>
 <div class="footerSection">
 <div class="footerSectionHeader">Contact</div>
-<div>contact@mathified.com</div>
+<div>contactus@mathified.com</div>
 <div>469-605-1144</div>
 <div><a href="feedback">Leave Feedback</a></div>
 </div>

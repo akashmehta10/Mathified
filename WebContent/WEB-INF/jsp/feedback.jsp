@@ -15,6 +15,16 @@
 <meta name="theme-color" content="#5f5f5f">
 <script src="resources/js/angular.min.js"></script>
 <script src="resources/js/feedback.js"></script>
+<title>Feedback - Mathified</title>
+<meta name="description" content="Feedback of Mathified">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-101594780-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </head>
 <body>
 	<jsp:include page="/WEB-INF/jsp/header.jsp" />

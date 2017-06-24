@@ -12,6 +12,11 @@
 <link rel="stylesheet" type="text/css" href="resources/css/footer.css" />
 <link rel="stylesheet" media="screen"
 	href="resources/css/handsontable.full.min.css">
+<link rel="apple-touch-icon" sizes="180x180" href="resources/images/favicons_mathified/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="resources/images/favicons_mathified/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="resources/images/favicons_mathified/favicon-16x16.png">
+<link rel="manifest" href="resources/images/favicons_mathified/manifest.json">
+<meta name="theme-color" content="#5f5f5f">
 <script src="resources/js/angular.min.js"></script>
 <script src="resources/js/handsontable.full.min.js"></script>
 <script src="resources/js/ngHandsontable.js"></script>
@@ -49,9 +54,16 @@
 				Summing on Column:
 				<select ng-model="groupBySumColumn">
 				<option value="N/A">N/A</option>
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
+				<option value="0">1</option>
+				<option value="1">2</option>
+				<option value="2">3</option>
+				<option value="3">4</option>
+				<option value="4">5</option>
+				<option value="5">6</option>
+				<option value="6">7</option>
+				<option value="7">8</option>
+				<option value="8">9</option>
+				<option value="9">10</option>
 				</select>
 			</div>
 			<div class='btnGroupBy'>
@@ -59,8 +71,8 @@
 					ng-click="ctrl.loadResults()" />
 			</div>
 		</form>
+		<div class="groupByResultText" ng-show="groupByResultTextShow">Result: {{ inputErrorFromServer }}</div>
 		<div class="groupByResult" ng-show="groupByResultShow">
-			<div class="groupByResultText">Result: {{ inputErrorFromServer }}</div>
 			<div class="tableGroupResult">
 				<table class="groupByResultTable">
 					<tr>
