@@ -2,3 +2,4 @@ Requirements:
 
 1. Should be able to perform animation using 3rd party libs
 2. Code should be maintainable
+3. Use best practices
